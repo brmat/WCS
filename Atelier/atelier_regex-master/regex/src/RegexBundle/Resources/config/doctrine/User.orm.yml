@@ -1,0 +1,24 @@
+RegexBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: RegexBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        prenom:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+        tel:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

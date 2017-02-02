@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Debugs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Content1</th>
+                <th>Content2</th>
+                <th>Content3</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for debug in debugs %}
+            <tr>
+                <td><a href="{{ path('debug_show', { 'id': debug.id }) }}">{{ debug.id }}</a></td>
+                <td>{{ debug.content1 }}</td>
+                <td>{{ debug.content2 }}</td>
+                <td>{{ debug.content3 }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('debug_show', { 'id': debug.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('debug_edit', { 'id': debug.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('debug_new') }}">Create a new debug</a>
+        </li>
+    </ul>
+{% endblock %}

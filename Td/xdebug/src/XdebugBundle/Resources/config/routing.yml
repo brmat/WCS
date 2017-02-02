@@ -1,0 +1,7 @@
+xdebug_debug:
+    resource: "@XdebugBundle/Resources/config/routing/debug.yml"
+    prefix:   /debug
+
+xdebug_homepage:
+    path:     /
+    defaults: { _controller: XdebugBundle:Default:index }

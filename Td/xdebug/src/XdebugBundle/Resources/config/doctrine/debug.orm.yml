@@ -1,0 +1,21 @@
+XdebugBundle\Entity\debug:
+    type: entity
+    table: null
+    repositoryClass: XdebugBundle\Repository\debugRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        content1:
+            type: string
+            length: 255
+        content2:
+            type: string
+            length: 255
+        content3:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

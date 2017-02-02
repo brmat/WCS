@@ -1,0 +1,3 @@
+sass_homepage:
+    path:     /
+    defaults: { _controller: SassBundle:Default:index }

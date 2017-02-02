@@ -1,0 +1,7 @@
+RegexBundle\Entity\User:
+    properties:
+        email:
+            - Regex: '/^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/'
+        nom:
+#             only alphanumerique
+            - Regex: '/^\w*$/'

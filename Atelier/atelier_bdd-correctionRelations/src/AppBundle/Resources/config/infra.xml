@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!-- repositories -->
+
+        <service id="reflectgen.infra.categorie_repository" class="Doctrine\ORM\EntityRepository"
+                 factory-service="doctrine.orm.default_entity_manager" factory-method="getRepository">
+            <argument>AppBundle\Entity\Categorie</argument>
+        </service>
+
+        <service id="reflectgen.infra.couleur_repository" class="Doctrine\ORM\EntityRepository"
+                 factory-service="doctrine.orm.default_entity_manager" factory-method="getRepository">
+            <argument>AppBundle\Entity\Couleur</argument>
+        </service>
+
+        <service id="reflectgen.infra.finition_repository" class="Doctrine\ORM\EntityRepository"
+                 factory-service="doctrine.orm.default_entity_manager" factory-method="getRepository">
+            <argument>AppBundle\Entity\Finition</argument>
+        </service>
+
+        <service id="reflectgen.infra.gabarit_repository" class="Doctrine\ORM\EntityRepository"
+                 factory-service="doctrine.orm.default_entity_manager" factory-method="getRepository">
+            <argument>AppBundle\Entity\Gabarit</argument>
+        </service>
+
+        <service id="reflectgen.infra.modele_repository" class="Doctrine\ORM\EntityRepository"
+                 factory-service="doctrine.orm.default_entity_manager" factory-method="getRepository">
+            <argument>AppBundle\Entity\Modele</argument>
+        </service>
+
+        <service id="reflectgen.infra.vehicule_repository" class="Doctrine\ORM\EntityRepository"
+                 factory-service="doctrine.orm.default_entity_manager" factory-method="getRepository">
+            <argument>AppBundle\Entity\Vehicule</argument>
+        </service>
+    </services>
+</container>

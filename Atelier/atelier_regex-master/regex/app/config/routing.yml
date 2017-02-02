@@ -1,0 +1,3 @@
+regex:
+    resource: "@RegexBundle/Resources/config/routing.yml"
+    prefix:   /

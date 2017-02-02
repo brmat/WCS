@@ -1,0 +1,5 @@
+xdebug:
+    resource: "@XdebugBundle/Resources/config/routing.yml"
+    prefix:   /
+
+

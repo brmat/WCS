@@ -1,0 +1,24 @@
+debug_index:
+    path:     /
+    defaults: { _controller: "XdebugBundle:debug:index" }
+    methods:  GET
+
+debug_show:
+    path:     /{id}/show
+    defaults: { _controller: "XdebugBundle:debug:show" }
+    methods:  GET
+
+debug_new:
+    path:     /new
+    defaults: { _controller: "XdebugBundle:debug:new" }
+    methods:  [GET, POST]
+
+debug_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "XdebugBundle:debug:edit" }
+    methods:  [GET, POST]
+
+debug_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "XdebugBundle:debug:delete" }
+    methods:  DELETE

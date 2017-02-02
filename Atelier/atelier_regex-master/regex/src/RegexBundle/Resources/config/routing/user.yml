@@ -1,0 +1,30 @@
+user_index:
+    path:     /
+    defaults: { _controller: "RegexBundle:User:index" }
+    methods:  GET
+
+user_show:
+    path:     /{id}/show
+    defaults: { _controller: "RegexBundle:User:show" }
+    methods:  GET
+    requirements:
+        id:     \d+
+
+user_new:
+    path:     /new
+    defaults: { _controller: "RegexBundle:User:new" }
+    methods:  [GET, POST]
+
+user_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RegexBundle:User:edit" }
+    methods:  [GET, POST]
+    requirements:
+        id:     \d+
+
+user_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RegexBundle:User:delete" }
+    methods:  DELETE
+    requirements:
+        id:     \d+
